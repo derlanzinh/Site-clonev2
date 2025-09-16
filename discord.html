@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Server Cloner - Clone servidores Discord</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="discord-style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav">
+                <a href="/" class="nav-link">🌐 Site Cloner</a>
+                <a href="/discord.html" class="nav-link active">🎮 Discord Cloner</a>
+            </nav>
+            <h1 class="title">🎮 Discord Server Cloner</h1>
+            <p class="subtitle">Clone servidores Discord de forma completa e segura</p>
+        </header>
+
+        <main class="main">
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>⚠️ Importante</h3>
+                    <p>Mantenha seu token seguro! Nunca compartilhe com terceiros. Sua conta deve estar presente nos dois servidores.</p>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <form id="discordCloneForm" class="clone-form">
+                    <div class="input-group">
+                        <label for="userToken" class="label">Token da sua conta Discord:</label>
+                        <input 
+                            type="password" 
+                            id="userToken" 
+                            name="token" 
+                            placeholder="Seu token do Discord" 
+                            required 
+                            class="input"
+                        >
+                        <small class="input-help">⚠️ Mantenha seu token seguro e privado</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="originalServer" class="label">ID do Servidor Original:</label>
+                        <input 
+                            type="text" 
+                            id="originalServer" 
+                            name="originalServerId" 
+                            placeholder="ID do servidor que será copiado" 
+                            required 
+                            class="input"
+                        >
+                        <small class="input-help">💡 Clique com botão direito no servidor → Copiar ID</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="targetServer" class="label">ID do Servidor Destino:</label>
+                        <input 
+                            type="text" 
+                            id="targetServer" 
+                            name="targetServerId" 
+                            placeholder="ID do servidor onde será colado" 
+                            required 
+                            class="input"
+                        >
+                        <small class="input-help">🎯 Servidor onde a estrutura será aplicada</small>
+                    </div>
+
+                    <button type="submit" class="clone-btn" id="discordCloneBtn">
+                        <span class="btn-text">🚀 Clonar Servidor Discord</span>
+                        <div class="loading-spinner" id="discordLoadingSpinner"></div>
+                    </button>
+                </form>
+            </div>
+
+            <div class="result-container" id="discordResultContainer">
+                <div class="result-message" id="discordResultMessage"></div>
+            </div>
+
+            <div class="tutorial-section">
+                <h3>📋 Como obter as informações necessárias</h3>
+                <div class="tutorial-grid">
+                    <div class="tutorial-card">
+                        <h4>🔑 Como obter seu token</h4>
+                        <ol>
+                            <li>Abra o Discord no navegador</li>
+                            <li>Pressione F12 (Ferramentas do desenvolvedor)</li>
+                            <li>Vá para a aba "Network"</li>
+                            <li>Recarregue a página (F5)</li>
+                            <li>Procure por requisições com "authorization"</li>
+                            <li>Copie o valor do header authorization</li>
+                        </ol>
+                    </div>
+                    <div class="tutorial-card">
+                        <h4>🆔 Como obter ID do servidor</h4>
+                        <ol>
+                            <li>Ative o "Modo Desenvolvedor" no Discord</li>
+                            <li>Configurações → Avançado → Modo Desenvolvedor</li>
+                            <li>Clique com botão direito no servidor</li>
+                            <li>Selecione "Copiar ID"</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="features-section">
+                    <h4>🏗️ O que será clonado:</h4>
+                    <div class="features-grid">
+                        <div class="feature-item">✅ Canais de texto e voz</div>
+                        <div class="feature-item">✅ Categorias</div>
+                        <div class="feature-item">✅ Cargos e permissões</div>
+                        <div class="feature-item">✅ Emojis personalizados</div>
+                        <div class="feature-item">✅ Ícone do servidor</div>
+                        <div class="feature-item">✅ Configurações de canais</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Discord Server Cloner. Use com responsabilidade!</p>
+        </footer>
+    </div>
+
+    <script src="discord-script.js"></script>
+</body>
+</html>
+

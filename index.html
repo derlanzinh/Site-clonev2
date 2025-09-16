@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Cloner - Clone qualquer site facilmente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav">
+                <a href="/" class="nav-link active">🌐 Site Cloner</a>
+                <a href="/discord.html" class="nav-link">🎮 Discord Cloner</a>
+            </nav>
+            <h1 class="title">🌐 Site Cloner</h1>
+            <p class="subtitle">Clone qualquer site da web de forma rápida e fácil</p>
+        </header>
+
+        <main class="main">
+            <div class="form-container">
+                <form id="cloneForm" class="clone-form">
+                    <div class="input-group">
+                        <label for="siteName" class="label">Nome do Site:</label>
+                        <input 
+                            type="text" 
+                            id="siteName" 
+                            name="name" 
+                            placeholder="Ex: Meu Portfolio" 
+                            required 
+                            class="input"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="siteUrl" class="label">URL do Site:</label>
+                        <input 
+                            type="url" 
+                            id="siteUrl" 
+                            name="url" 
+                            placeholder="https://exemplo.com" 
+                            required 
+                            class="input"
+                        >
+                    </div>
+
+                    <button type="submit" class="clone-btn" id="cloneBtn">
+                        <span class="btn-text">🚀 Clonar Site</span>
+                        <div class="loading-spinner" id="loadingSpinner"></div>
+                    </button>
+                </form>
+            </div>
+
+            <div class="result-container" id="resultContainer">
+                <div class="result-message" id="resultMessage"></div>
+                <div class="download-link" id="downloadLink"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Site Cloner. Desenvolvido com ❤️</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
